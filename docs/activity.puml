@@ -1,0 +1,11 @@
+@startuml
+title An activity diagram
+(*) --> "register"
+if "is Great" then
+--> [true] "review"
+else
+--> [false] "reject"
+"review" --> (*)
+"reject" --> "destroy"
+"destroy" --> (*)
+@enduml
