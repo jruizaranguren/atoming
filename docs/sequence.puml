@@ -1,0 +1,5 @@
+@startuml
+Javier -> Fulano
+Fulano -> Mengano
+Mengano -> Javier
+@enduml
