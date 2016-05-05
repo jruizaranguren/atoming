@@ -1,0 +1,13 @@
+@startuml
+title Component diagram
+
+package "System" {
+cloud "notifications"
+
+cloud "register"
+}
+
+[notifications] "u" --> "d" [register]
+
+
+@enduml
