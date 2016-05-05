@@ -1,0 +1,11 @@
+@startuml
+title State diagram sample
+[*] --> sent
+sent: message sent
+sent --> managed
+note right of managed: this can be done
+managed --> accepted
+managed --> rejected
+accepted --> [*]
+rejected --> [*]
+@enduml
