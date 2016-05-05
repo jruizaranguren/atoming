@@ -1,5 +1,31 @@
 @startuml
-Javier -> Fulano
-Fulano -> Mengano
-Mengano -> Javier
+title Typical web service request
+skinparam monochrome true
+
+participant user
+boundary webclient
+box "Backend"
+control service
+control cache
+database store
+end box
+
+user -> webclient : submit
+webclient -> service : route
+activate service
+service -> cache: check
+note right
+   in memory
+   cache
+end note
+cache -> service: ack
+service -> service : process
+service -> store : save
+... takes some seconds ...
+store -> service: ack
+service -> webclient: ack
+deactivate service
+webclient -> user: ack
+
+
 @enduml

@@ -10,4 +10,5 @@ Playing with Atom IDE
 ## plantUML
 
 Atom packages:
+* language-plantUML
 * plantUML-viewer: requires proper installation of Graphviz.
