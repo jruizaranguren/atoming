@@ -1,0 +1,21 @@
+@startuml
+title A class diagram
+
+IRequest <|-- HttpRequest
+HttpRequest "1" o-- "*" Header
+HttpRequest ..> "uses" HttpContext
+
+
+interface IRequest {
+  send()
+}
+class HttpRequest {
+HttpMethod method
+flush()
+}
+
+enum HttpMethod {
+  POST
+  GET
+}
+@enduml
