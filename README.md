@@ -12,3 +12,6 @@ Playing with Atom IDE
 Atom packages:
 * language-plantUML
 * plantUML-viewer: requires proper installation of Graphviz.
+
+An alternative is:
+* plantUML-preview: similar results, but in addition to Graphviz requires the plantuml.jar
